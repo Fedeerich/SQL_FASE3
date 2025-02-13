@@ -13,7 +13,7 @@ select nom, icao from companyia;
 select num_serie, fabricant, any_fabricacio as any, companyia from avio;
 
 -- Pregunta 3
-select CONCAT(nom, ciutat, any_construccio) as aeroport from aeroport;
+select CONCAT('L''aeroport ', nom, ' està a ', ciutat, ' i va ser contruït l''any ', any_construccio) as aeroport from aeroport where pais like 'Spain';
 
 -- Pregunta 4
 select 'No ho sé';
