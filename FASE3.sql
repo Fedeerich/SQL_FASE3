@@ -25,15 +25,13 @@ where pais like '%Spain%';
 -- Pregunta 4 
 select nom, pais, CHAR_LENGTH(nom) as longitud 
 from aeroport
-where (nom LIKE '%e%e%e%' 
-  and nom NOT LIKE '%e%e%e%e%') and CHAR_LENGTH(nom) between 7 and 9 
+where (nom LIKE '%e%e%e%'  and nom NOT LIKE '%e%e%e%e%') and CHAR_LENGTH(nom) between 7 and 9 
 order by CHAR_LENGTH(nom) DESC, pais ASC;
 
 -- Pregunta 5
 select num_serie
 from avio
-where any_fabricacio=2008
-and (fabricant='Concorde' or companyia='Alitalia')
+where any_fabricacio=2008 and (fabricant='Concorde' or companyia='Alitalia')
 order by num_serie DESC;
 
 -- Pregunta 6
